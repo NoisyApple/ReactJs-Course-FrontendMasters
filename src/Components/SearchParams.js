@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { default as ANIMALS } from "../../node_modules/@frontendmasters/pet/animals";
+import { ANIMALS } from "@frontendmasters/pet";
 import useDropdown from "./useDropdown";
 
 const SearchParams = () => {

@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const EslintWebpackPlugin = require("eslint-webpack-plugin");
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -34,6 +35,9 @@ module.exports = {
     }),
     new EslintWebpackPlugin({
       files: "**/*.js",
+    }),
+    new webpack.ProvidePlugin({
+      process: "process/browser",
     }),
   ],
   devServer: {
