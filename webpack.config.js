@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build/"),
     filename: "bundle.js",
-    publicPath: "./",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -41,7 +41,8 @@ module.exports = {
     }),
   ],
   devServer: {
-    publicPath: "/server/",
+    publicPath: "/",
     port: 4040,
+    historyApiFallback: true,
   },
 };
